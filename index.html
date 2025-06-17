@@ -1,0 +1,1696 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bea Villanea | Strategic Operations Partner for Realtors</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN for scalable vector icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ENHANCED: Custom CSS variables for vibrant brand identity */
+        :root {
+            --primary-pink: #E91E63; /* Stronger, more vibrant pink */
+            --primary-pink-dark: #C2185B; /* Darker shade for hover states */
+            --primary-pink-light: #F8BBD9; /* Light pink for backgrounds */
+            --primary-pink-ultra-light: #FCE4EC; /* Ultra light pink */
+            --accent-gradient: linear-gradient(135deg, #E91E63, #FF6B9D); /* Dynamic gradient */
+            --accent-gradient-hover: linear-gradient(135deg, #C2185B, #E91E63); /* Hover gradient */
+            --neutral-dark: #413f3f; /* Rich dark gray */
+            --neutral-medium: #7e7b7b; /* Medium gray */
+            --neutral-light: #c4c2c2; /* Light gray */
+            --neutral-ultra-light: #F7FAFC; /* Background color */
+            --success-color: #4CAF50; /* Green for success states */
+            --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ENHANCED: Typography system with better hierarchy */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--neutral-ultra-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--neutral-dark);
+            line-height: 1.2;
+        }
+
+        /* Optimized typography hierarchy */
+        h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 900; }
+        h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+
+        /* ENHANCED: Modern button system with better visual impact */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: perspective(1px) translateZ(0);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-gradient-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            background-color: white;
+            color: var(--neutral-medium);
+            border: 2px solid #E2E8F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-pink);
+            color: var(--primary-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+        }
+
+        /* ENHANCED: Urgent CTA styling */
+        .btn-urgent {
+            position: relative;
+            animation: pulse-urgent 2s infinite;
+            background: linear-gradient(135deg, #FF6B9D, #E91E63, #C2185B);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite, pulse-urgent 2s infinite;
+        }
+
+        @keyframes pulse-urgent {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+                opacity: 1; /* Ensure opacity is reset */
+                transform: scale(1); /* Re-added for pulsing effect */
+            }
+            50% {
+                box-shadow: 0 12px 40px rgba(233, 30, 99, 0.5);
+                opacity: 0.8; /* Subtle opacity change */
+                transform: scale(1.05); /* Re-added for pulsing effect */
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ENHANCED: Card system with better visual hierarchy */
+        .card-enhanced {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card-enhanced:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-enhanced:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* ENHANCED: Hero section with dramatic visual impact */
+        .hero-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-ultra-light) 0%, white 50%, #F0F9FF 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .hero-enhanced::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 60%;
+            height: 180%;
+            background: radial-gradient(circle, var(--primary-pink-light), transparent 70%);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: heroFloat 8s ease-in-out infinite;
+        }
+
+        .hero-enhanced::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(circle, #E3F2FD, transparent 60%);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: heroFloat 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-30px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(20px) rotate(-1deg) scale(0.98); }
+        }
+
+        /* ENHANCED: Value proposition highlighting */
+        .value-highlight {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            display: inline-block;
+            position: relative;
+        }
+
+        .value-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+
+        /* ENHANCED: Social proof styling */
+        .social-proof-banner {
+            background: linear-gradient(135deg, #C2185B, #cf6891);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            border-left: 4px solid var(--primary-pink);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary-pink);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ENHANCED: Results showcase styling */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .result-stat {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .result-stat:hover {
+            transform: translateY(-8px);
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: var(--neutral-medium);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ENHANCED: Animation system */
+        .animate-fade-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-fade-up:not(.in-view) {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .animate-fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-scale-in {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-scale-in:not(.in-view) {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .animate-scale-in.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ENHANCED: Section styling */
+        .section-enhanced {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.8rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--neutral-dark), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--neutral-medium);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        /* ENHANCED: Banner animation with urgency */
+        .scrolling-banner {
+            overflow: hidden;
+            background: var(--primary-pink);
+            color: white;
+            padding: 1.25rem 0;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-pink), #FF6B9D);
+        }
+
+        .scrolling-banner::before,
+        .scrolling-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .scrolling-banner::before {
+            left: 0;
+            background: linear-gradient(to right, var(--primary-pink), transparent);
+        }
+
+        .scrolling-banner::after {
+            right: 0;
+            background: linear-gradient(to left, var(--primary-pink), transparent);
+        }
+
+        .banner-content {
+            display: flex;
+            animation: scroll-left 20s linear infinite;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .banner-text {
+            margin-right: 4rem;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ENHANCED: Urgency indicators */
+        .urgency-indicator {
+            background: linear-gradient(135deg, #FF4444, #FF6B6B);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: urgency-pulse 2s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Re-added transform properties for visual pulse */
+        @keyframes urgency-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        /* ENHANCED: Responsive improvements */
+        @media (max-width: 768px) {
+            .section-enhanced {
+                padding: 4rem 0;
+            }
+
+            .hero-enhanced {
+                padding: 4rem 0;
+                text-align: center;
+            }
+
+            .btn-primary {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
+            }
+
+            .card-enhanced {
+                padding: 2rem;
+            }
+        }
+
+        /* ENHANCED: Visual elements */
+        .accent-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary-pink);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 1rem;
+            animation: dot-pulse 2s infinite;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .divider-enhanced {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-pink), transparent);
+            margin: 4rem 0;
+        }
+
+        /* ENHANCED: Icon styling */
+        .icon-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-light), var(--primary-pink-ultra-light));
+            border-radius: 24px;
+            padding: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .icon-enhanced:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .icon-enhanced i {
+            color: var(--primary-pink);
+        }
+
+        /* ENHANCED: Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            padding: 1.25rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 12px 40px rgba(233, 30, 99, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: floating-bounce 3s ease-in-out infinite;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-gradient-hover);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.5);
+        }
+
+        @keyframes floating-bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Contact Form Enhanced Styling */
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            color: var(--neutral-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-size: 1rem;
+            color: var(--neutral-dark);
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        /* Success message styling */
+        .success-message {
+            background: linear-gradient(135deg, #4CAF50, #45A049);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ENHANCED: Header with improved styling and urgency -->
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100">
+        <!-- Social Proof Banner -->
+        <div class="social-proof-banner text-sm">
+            <div class="flex items-center justify-center gap-2">
+                <i data-lucide="check-circle" class="h-4 w-4"></i>
+                <span>✨ Trusted by Top Realtors | 98% Client Satisfaction Rate</span>
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+        </div>
+
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold">
+                        <span style="color: var(--primary-pink);">Bea Villanea</span>
+                        <span class="text-gray-700 text-lg"> | VA for Realtors</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#services" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#results" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Results</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Success Stories</a>
+                        <a href="#contact" class="btn-primary text-sm px-6 py-2">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Services</a>
+                    <a href="#about" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">About</a>
+                    <a href="#results" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Results</a>
+                    <a href="#testimonials" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Success Stories</a>
+                    <a href="#contact" class="btn-primary text-sm px-6 py-2">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ENHANCED: Hero Section with dramatic impact and stronger value proposition -->
+        <section class="hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="animate-fade-up relative z-10">
+                        <div class="inline-flex items-center bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-pink-200">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-sm font-medium text-gray-700">📈 Available for New Client Partnerships!</span>
+                        </div>
+                   
+                        <h1 class="mb-6 font-black leading-tight">
+                            Close More Deals & Scale Your Real Estate Business.<br>
+                            <span class="value-highlight">Delegate Ops, Gain 20+ Hours Weekly</span>
+                            for Clients & Growth.
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
+                            Transform your real estate business from bogged down by admin to efficiently optimized. I handle the operational complexity – from lead nurturing to transaction coordination – so you can focus 100% on client relationships, property showings, and <strong class="text-pink-600">scaling your profitability by 40-60%</strong>.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a href="#contact" class="btn-primary btn-urgent">
+                                <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                Book Your FREE Strategy Call
+                            </a>
+                            <a href="#results" class="btn-secondary relative z-20">
+                                <i data-lucide="trending-up" class="mr-2 h-4 w-4"></i>
+                                See Client Results
+                            </a>
+                        </div>
+                        <!-- Enhanced credibility indicators -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">13+ Years Experience</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Business & Marketing Certified</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Happy Real Estate Pros</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Image Section -->
+                    <div class="animate-scale-in relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform rotate-3 opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform -rotate-2 opacity-40"></div>
+                        <img
+                            src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.36.20_93175f5f.jpg?updatedAt=1749886904306"
+                            alt="Bea Villanea - Strategic Operations Partner for Realtors"
+                            class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                        >
+                        <!-- Floating testimonial preview -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="flex">
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">"Bea liberated my time! Now I focus on client relationships while she handles everything else for my real estate business."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Jessica M., Top-Producing Realtor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Results Section - High Impact -->
+        <section id="results" class="section-enhanced bg-gradient-to-br from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Tangible Results for Top Real Estate Professionals</h2>
+                    <p class="section-subtitle">
+                        Realtors who partner with me see dramatic improvements in lead conversion, transaction efficiency, and overall profitability within 30 days.
+                    </p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number">20+</span>
+                        <span class="result-label">Hours Saved for Client Work</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number">45%</span>
+                        <span class="result-label">Commission Profitability Increase</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number">98%</span>
+                        <span class="result-label">Client & Transaction Satisfaction</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number">30</span>
+                        <span class="result-label">Day Business Transformation</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#testimonials" class="btn-secondary">
+                        <i data-lucide="arrow-right" class="mr-2 h-4 w-4"></i>
+                        Read Success Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Scrolling Banner with stronger messaging -->
+        <div class="scrolling-banner">
+            <div class="banner-content">
+                <span class="banner-text">⚡ RECLAIM 20+ HOURS FOR DEALS & CLIENTS</span>
+                <span class="banner-text">🚀 ACCELERATE COMMISSION PROFITABILITY</span>
+                <span class="banner-text">✨ FOCUS ON CLIENTS & STRATEGIC GROWTH</span>
+                <span class="banner-text">📈 OPTIMIZE YOUR TRANSACTION WORKFLOWS</span>
+                <span class="banner-text">💎 PREMIUM SUPPORT FOR REALTORS</span>
+                <span class="banner-text">🎯 TRANSFORM YOUR BUSINESS IN 30 DAYS</span>
+                <span class="banner-text">⚡ RECLAIM 20+ HOURS FOR DEALS & CLIENTS</span>
+                <span class="banner-text">🚀 ACCELERATE COMMISSION PROFITABILITY</span>
+                <span class="banner-text">✨ FOCUS ON CLIENTS & STRATEGIC GROWTH</span>
+                <span class="banner-text">📈 OPTIMIZE YOUR TRANSACTION WORKFLOWS</span>
+            </div>
+        </div>
+
+        <!-- ENHANCED: Problem Section with stronger emotional impact -->
+        <section id="problem" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Is Administrative Overload Holding Back Your Real Estate Business?</h2>
+                    <p class="section-subtitle">
+                        You became a realtor to help people find their dream homes, not to spend 70% of your time on paperwork, scheduling showings, and marketing tasks. Let's fix that.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="clock" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">The Time Drain Crisis</h3>
+                        <p class="text-gray-600 mb-4">
+                            You're spending 20+ hours weekly on administrative tasks like listing coordination, scheduling showings, CRM updates, and marketing prep instead of strategic client engagement and closing deals.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            💰 Cost: Thousands in lost commissions monthly
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="trending-down" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">Missed Deal Opportunities</h3>
+                        <p class="text-gray-600 mb-4">
+                            Every hour on admin is an hour not spent on high-value lead follow-up, showing properties, or negotiating contracts.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            📉 Result: Stagnant pipeline & missed closing opportunities
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="battery-low" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">Realtor Burnout Risk</h3>
+                        <p class="text-gray-600 mb-4">
+                            Constant task-switching between client-facing activities and backend office work is mentally exhausting and unsustainable for real estate professionals.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            🔥 Warning: Passion becoming a burden
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="arrow-right" class="mr-2 h-5 w-5"></i>
+                        End the Struggle - Book Your Free Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Services Section with better value proposition -->
+        <section id="services" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Comprehensive Operational Support for High-Performing Realtors</h2>
+                    <p class="section-subtitle">
+                        Everything you need to run a smooth, profitable real estate business while you focus exclusively on nurturing client relationships, showing properties, and closing deals.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="users" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Seamless Client & Lead Management</h3>
+                        <p class="text-gray-600 text-sm mb-4">Manage client communications, nurture leads, and ensure smooth interactions from initial contact to post-closing follow-up.</p>
+                        <div class="text-sm text-pink-600 font-semibold">✨ Nurture leads & build lasting client relationships</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="calendar" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Optimized Showing & Appointment Scheduling</h3>
+                        <p class="text-gray-600 text-sm mb-4">Efficiently schedule property showings, open houses, client meetings, and inspections, maximizing your field time.</p>
+                        <div class="text-sm text-pink-600 font-semibold">⏰ Maximize your time in the field, not in your calendar</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="share-2" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Strategic Marketing & Podcast management</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll create and manage your marketing materials, social campaigns, and property listings to attract buyers and sellers. Plus, I offer full podcast management—from scheduling and repurposing to marketing—to expand your reach.</p>
+                        <div class="text-sm text-pink-600 font-semibold">📈 Boost property visibility & attract qualified leads</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="dollar-sign" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Transaction Coordination & Financial Admin</h3>
+                        <p class="text-gray-600 text-sm mb-4">Handle invoicing, expense tracking, payment follow-ups, and meticulous documentation for all your real estate transactions.</p>
+                        <div class="text-sm text-pink-600 font-semibold">💰 Streamline closings & ensure financial accuracy</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="clipboard" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Listing Coordination & Document Management</h3>
+                        <p class="text-gray-600 text-sm mb-4">Manage listing paperwork, coordinate professional photography, virtual tours, and ensure all documents are organized and accessible.</p>
+                        <div class="text-sm text-pink-600 font-semibold">🎯 Optimize every step from listing to close</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="globe" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Website Updates & CRM Optimization</h3>
+                        <p class="text-gray-600 text-sm mb-4">Maintain property listings, manage client databases, execute email campaigns, and enhance your online presence to capture more leads.</p>
+                        <div class="text-sm text-pink-600 font-semibold">🌟 Attract more serious buyers & sellers</div>
+                    </div>
+
+                    <!-- NEW: Talent Acquisition/Recruitment Service Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="briefcase" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Team Support & Referral Network Assistance</h3>
+                        <p class="text-gray-600 text-sm mb-4">Support in building your real estate team, managing new hires, and assisting with referral partner communications to expand your network.</p>
+                        <div class="text-sm text-pink-600 font-semibold">👥 Build your thriving real estate team efficiently</div>
+                    </div>
+
+                    <!-- NEW: Executive Content Repurposing & Distribution Service Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="mic" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Funnels & Digital Strategy</h3>
+                        <p class="text-gray-600 text-sm mb-4">I specialize in developing comprehensive sales funnels, appointment booking funnels, effective email nurture sequences, automated workflows, and compelling lead magnets.</p>
+                        <div class="text-sm text-pink-600 font-semibold">💡 Streamline your strategy & convert prospects into clients!</div>
+                    </div>
+
+                    <!-- REVISED: Your professional cheerleader Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="sparkles" class="h-8 w-8"></i>
+                            <!-- Changed icon to sparkles for a more 'cheerleader' vibe -->
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Your Dedicated Professional Cheerleader & Accountability Partner</h3>
+                        <p class="text-gray-600 text-sm mb-4">Beyond tasks, I provide dedicated support, motivation, and accountability to ensure you stay energized and focused on your sales targets and client success.</p>
+                        <div class="text-sm text-pink-600 font-semibold">🎉 Keep your motivation high & goals on track!</div>
+                    </div>
+
+                    <!-- END NEW SERVICE CARD -->
+
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Discuss Your Specific Needs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: About Section with stronger positioning -->
+        <section id="about" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-up">
+                        <div class="inline-flex items-center bg-pink-100 rounded-full px-4 py-2 mb-6">
+                            <span class="text-sm font-semibold text-pink-700">👋 Meet Your Strategic Real Estate Business Partner</span>
+                        </div>
+                        <h2 class="section-title text-left">Why Top-Producing Realtors Choose Me</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Hi, I'm Bea Villanea. With 13+ years of work experience and deep expertise in executive support, marketing, business operations, technical support and customer service, I don't just handle tasks. I become your strategic partner in scaling your real estate business while preserving your focus on client relationships, negotiations, and closing deals.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">13+ Years of Excellence:</span>
+                                    <span class="text-gray-700 ml-1">Proven track record with satisfied real estate professionals</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Industry-Certified Professional:</span>
+                                    <span class="text-gray-700 ml-1">Google & Meta certified with specialized operational workflow expertise for real estate</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Strategic Real Estate Partner:</span>
+                                    <span class="text-gray-700 ml-1">I understand lead generation, transaction flow, and market strategies for realtors</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Dedicated & Resilient:</span>
+                                    <span class="text-gray-700 ml-1">Marathon runner mindset – I go the distance for your sales success</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-pink-100 mb-8">
+                            <p class="text-gray-700 italic text-lg">
+                                "My mission is simple: Give you back the time and mental space to do what you love most – connecting with clients, showing properties, and closing more deals to build your thriving real estate empire." - Bea
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="btn-primary">
+                                <i data-lucide="message-circle" class="mr-2 h-5 w-5"></i>
+                                Let's Discuss Your Vision
+                            </a>
+                            <a href="#testimonials" class="btn-secondary">
+                                <i data-lucide="star" class="mr-2 h-4 w-4"></i>
+                                Read Success Stories
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="animate-scale-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform rotate-2 opacity-60"></div>
+                            <img
+                                src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.38.06_4e303549.jpg?updatedAt=1749886904077"
+                                alt="Bea Villanea - Strategic Operations Partner for Realtors"
+                                class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                            >
+                            <!-- Floating achievement badges -->
+                            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">98%</div>
+                                    <div class="text-xs text-gray-600">Client Satisfaction</div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">13+</div>
+                                    <div class="text-xs text-gray-600">Years Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: 30-Day Transformation with better visual impact -->
+        <section id="transformation" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your 30-Day Blueprint to a Streamlined & Profitable Real Estate Business</h2>
+                    <p class="section-subtitle">
+                        Watch your real estate business transform from administrative chaos to closing success. Most realtors see dramatic improvements in lead conversion, transaction efficiency, and profitability within the first month.
+                    </p>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Enhanced timeline line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-pink-500 via-pink-400 to-pink-300 rounded-full shadow-lg"></div>
+
+                    <div class="space-y-16">
+                        <!-- Week 1 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-12 text-right animate-fade-up">
+                                <div class="card-enhanced mb-4 lg:mb-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">1</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Days 1-7: Rapid Integration & Immediate Sales Focus</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">🚀 Quick Wins Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        We establish streamlined workflows and I immediately take over your most time-consuming admin and operational tasks related to listings and client communication. You'll feel relief within 48 hours.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">5-8 hours freed up for client calls, property showings, or lead generation in your first week</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="zap" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+
+                        <!-- Week 2-3 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pr-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="trending-up" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 lg:pl-12 text-left animate-fade-up">
+                                <div class="card-enhanced mt-4 lg:mt-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">2</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Days 8-25: Proactive Transaction Optimization & Lead Nurturing</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">⚡ Momentum Building Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        I proactively manage your transaction coordination, marketing outreach, and key client follow-ups. You'll notice improved deal flow and smoother client journeys.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">15-20 hours weekly saved, transactions and client engagements running smoothly</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Week 4+ -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-12 text-right animate-fade-up">
+                                <div class="card-enhanced mt-4 lg:mt-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">3</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Day 30+: Strategic Sales Leadership & Accelerated Closings</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">🎯 Scale & Thrive Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        Your real estate business operates like a well-oiled machine. You're fully focused on high-value sales initiatives, market expansion, and accelerating deal closures.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">20+ hours weekly for client relations & closings, 40-60% profitability increase potential</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="crown" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Ready to Transform Your Real Estate Business?</h3>
+                        <p class="text-gray-600 mb-6">Join the top realtors who've reclaimed their time and accelerated their closings.</p>
+                        <a href="#contact" class="btn-primary btn-urgent">
+                            <i data-lucide="rocket" class="mr-2 h-5 w-5"></i>
+                            Start Your Transformation Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Testimonials Section with stronger social proof -->
+        <section id="testimonials" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Success Stories from Top-Producing Realtors</h2>
+                    <p class="section-subtitle">
+                        Read how visionary real estate professionals transformed their operations and amplified their sales and client satisfaction.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="testimonial-card animate-fade-up">
+                        <div class="flex mb-4">
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                            "Bea is a game-changer! Before working with her, I was bogged down with daily tasks. Now I focus 100% on client relationships and showing properties, and our closing rate has increased by 30% in just 3 months."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/120x120/E91E63/ffffff?text=JM" alt="Jessica M." class="w-14 h-14 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-lg">Jessica M.</p>
+                                <p class="text-sm text-gray-500">Top-Producing Realtor</p>
+                                <p class="text-xs text-pink-600 font-semibold">30% Increase in Closing Rate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-fade-up">
+                        <div class="flex mb-4">
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                            "Working with Bea completely transformed my **brokerage operations. She handles all the backend support so professionally that I can focus purely on team leadership and market expansion. Our agent productivity has soared."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/120x120/E91E63/ffffff?text=RS" alt="Robert S." class="w-14 h-14 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-lg">Robert S.</p>
+                                <p class="text-sm text-gray-500">Real Estate Broker/Owner</p>
+                                <p class="text-xs text-pink-600 font-semibold">Increased Agent Productivity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-fade-up">
+                        <div class="flex mb-4">
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                            "Bea isn't just a VA; she's a strategic business partner who genuinely understands the fast-paced real estate market. Her proactive approach has saved me 25+ hours weekly and significantly boosted our transaction efficiency and client referral rates."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/120x120/E91E63/ffffff?text=AR" alt="Amanda R." class="w-14 h-14 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-lg">Amanda R.</p>
+                                <p class="text-sm text-gray-500">Luxury Real Estate Agent</p>
+                                <p class="text-xs text-pink-600 font-semibold">25+ Hours Saved Weekly, Enhanced Referrals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced CTA -->
+                <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-pink-100">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Join These Success Stories?</h3>
+                    <p class="text-gray-600 mb-6">Your real estate business transformation story could be next. Let's discuss how to make it happen.</p>
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Book Your Success Strategy Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: FAQ Section with better user experience -->
+        <section id="faq" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your Questions, Answered</h2>
+                    <p class="section-subtitle">
+                        Everything you need to know about partnering with a specialized Strategic Operations Partner for your real estate business.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How quickly can you start helping my real estate business?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Immediate impact within 48 hours! I can immediately handle basic tasks like lead follow-up and scheduling showings. More complex integrations typically take 3-5 days. Most realtors feel significant relief in their first week and dramatic transformation by day 30.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">What makes you different from other virtual assistants for realtors?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    I specialize exclusively in supporting top-producing realtors, understanding your unique challenges: lead generation, transaction management, market trends, and scaling your business. I anticipate needs and optimize workflows. Plus, I'm Google & Meta certified with 13+ years of experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">Can you work with my existing real estate tools and software (MLS, CRM)?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Absolutely! I'm proficient with popular real estate tools and can quickly adapt to your preferred systems, including MLS platforms, CRM (e.g., Salesforce, Top Producer, Follow Up Boss), transaction management software (Dotloop, DocuSign), scheduling tools, and marketing platforms. I'll master any specialized tools you use quickly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How do we handle communication and time zones for real estate deals?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    I'm flexible and committed to your schedule. I adjust my working hours to align with your business timezone for seamless collaboration on your real estate transactions. We'll establish preferred communication channels (Slack, email, video calls) and regular check-ins. Many tasks are handled asynchronously, so critical deal work continues.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">What results can I realistically expect as a realtor?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Based on client results, you can expect to:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                    <li>**Reclaim 15-25 hours weekly** for high-value client engagement and deal-making</li>
+                                    <li>**Increase commission profitability by 40-60%** through improved efficiency and increased capacity</li>
+                                    <li>**Enhance client satisfaction and referrals** with smoother transactions</li>
+                                    <li>**Reduce stress and prevent burnout** by focusing on core sales functions</li>
+                                    <li>**Scale your real estate business** to handle more listings and buyers</li>
+                                </ul>
+                                <p class="text-gray-600">
+                                    These aren't just promises – they're consistent outcomes from my collaboration with top real estate professionals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How do we get started?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    **It's simple and risk-free:**
+                                </p>
+                                <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                                    <li>Book a free 30-minute consultation to discuss your real estate challenges and goals</li>
+                                    <li>Receive a custom proposal tailored to your specific operational needs</li>
+                                    <li>Experience immediate relief as I take over tasks, freeing you for client-facing work</li>
+                                </ol>
+                                <div class="bg-pink-50 rounded-xl p-4 border border-pink-200">
+                                    <p class="text-pink-800 font-semibold mb-2">Ready to transform your real estate business?</p>
+                                    <a href="#contact" class="btn-primary inline-flex items-center">
+                                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                        Schedule Your Free Consultation Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- ENHANCED: Contact Section with stronger conversion focus -->
+        <section id="contact" class="section-enhanced hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title">Ready to Close More Deals & Scale Your Real Estate Business?</h2>
+                        <p class="section-subtitle">
+                            Schedule your free 30-minute strategy call and discover exactly how I can transform your administrative burden into streamlined sales success within 30 days, allowing you to focus on clients and closings.
+                        </p>
+                        <div class="urgency-indicator mb-8">
+                            <i data-lucide="clock" class="h-4 w-4"></i>
+                           Don't miss your chance to get your high-level support.
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <!-- Right side: Professional Card (moved to the right) -->
+                        <div class="animate-scale-in">
+                            <div class="card-enhanced text-center">
+                                <img
+                                    src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(4).png?updatedAt=1749778070801"
+                                    alt="Bea Villanea - Strategic Operations Partner for Realtors"
+                                    class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-xl ring-4 ring-pink-100"
+                                >
+                                <h3 class="text-2xl font-bold mb-3">Let's Accelerate Your Real Estate Success Together!</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    I'm genuinely excited to learn about your unique real estate challenges and share exactly how we can work together to achieve your sales goals. No pressure, just honest advice and actionable strategies for a more efficient and profitable real estate practice.
+                                </p>
+
+                                <div class="bg-pink-50 rounded-xl p-4 mb-6 border border-pink-200">
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">98%</div>
+                                            <div class="text-gray-600">Client Satisfaction Rate</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">45%</div>
+                                            <div class="text-gray-600">Average Profitability Increase</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-500">
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
+                                        villaneabea1@gmail.com
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
+                                        Available Mon-Fri, 9AM-6PM Your Time
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="h-4 w-4 mr-2"></i>
+                                        Based in Philippines, Flexible Schedule
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left side: Value Proposition & Contact Options -->
+                        <div class="animate-fade-up">
+                            <div class="bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mb-8">
+                                <h3 class="text-2xl font-bold mb-6 text-center">What You'll Get in Your Free Call:</h3>
+
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="search" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Real Estate Business Assessment</p>
+                                            <p class="text-gray-600 text-sm">Identify exactly where administrative tasks are hindering your sales and client engagement</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="target" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Custom Realtor Operations Strategy</p>
+                                            <p class="text-gray-600 text-sm">Personalized plan to reclaim 20+ hours weekly for lead generation and client closings</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="trending-up" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Real Estate Growth Roadmap</p>
+                                            <p class="text-gray-600 text-sm">Clear path to accelerate profitability by 40-60% by optimizing your deal pipeline</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="gift" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Free Resource</p>
+                                            <p class="text-gray-600 text-sm">Guide to leverage your business with your VA Ebook</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center space-y-4">
+                                <a href="https://calendly.com/villaneabea1/30min" target="_blank" class="btn-primary btn-urgent w-full justify-center text-lg py-4">
+                                    <i data-lucide="calendar" class="mr-3 h-6 w-6"></i>
+                                    Book Your FREE Strategy Call Now
+                                </a>
+
+                                <p class="text-sm text-gray-500">⚡ Typically books within 24-48 hours</p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="mailto:villaneabea1@gmail.com" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="mail" class="mr-2 h-4 w-4"></i>
+                                        Send Direct Email
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9" target="_blank" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="linkedin" class="mr-2 h-4 w-4"></i>
+                                        Connect on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional trust signals -->
+                    <div class="text-center mt-12 pt-8 border-t border-pink-200">
+                        <p class="text-gray-600 mb-4">
+                            <strong>🔒 100% Confidential</strong> • <strong>📞 No Sales Pressure</strong> • <strong>💝 Genuine Value Guaranteed</strong>
+                        </p>
+                        <p class="text-sm text-gray-500 italic">
+                            "Every conversation starts with understanding your unique needs. I'm here to help, not to push." - Bea
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ENHANCED: Footer with better structure -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-white font-bold text-xl mb-4">Bea Villanea</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Specialized Strategic Operations Partner dedicated to helping real estate agents reclaim their time, scale their client base, and focus on what they do best – connecting with clients, showing properties, and closing deals.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                        <a href="mailto:villaneabea1@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://calendly.com/villaneabe1/30min" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="calendar" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Core Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Client & Lead Management</li>
+                        <li>Showing & Appointment Scheduling</li>
+                        <li>Property Marketing & Social Media</li>
+                        <li>Transaction Coordination & Financial Admin</li>
+                        <li>Listing Coordination & Document Mgmt</li>
+                        <li>Website Updates & CRM Optimization</li>
+                        <li>Team Support & Referral Network</li>
+                        <li>Client Education & Market Insights</li>
+                        <li>Professional Cheerleader/Accountability</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>
+                            <a href="#contact" class="hover:text-white transition-colors">Free Consultation</a>
+                        </li>
+                        <li>
+                            <a href="mailto:villaneabea1@gmail.com" class="hover:text-white transition-colors">villaneabea1@gmail.com</a>
+                        </li>
+                        <li>Available Mon-Fri</li>
+                        <li>Flexible Time Zones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bea Villanea. All rights reserved. | Empowering Real Estate Leaders to Thrive</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Floating CTA Button -->
+    <a href="#contact" class="floating-cta">
+        <i data-lucide="calendar" class="h-5 w-5"></i>
+        Book Free Call
+        <span class="text-xs bg-white/20 px-2 py-1 rounded-full">FREE</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Enhanced Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements and check initial visibility
+            document.querySelectorAll('.animate-fade-up, .animate-scale-in').forEach(el => {
+                observer.observe(el);
+
+                // Check if element is already in view on page load
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top >= 0 && rect.top <= windowHeight) {
+                    el.classList.add('in-view');
+                }
+            });
+
+            // Enhanced FAQ functionality
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const chevron = button.querySelector('i[data-lucide="chevron-down"]');
+
+                    const isOpen = !answer.classList.contains('hidden');
+
+                    // Close all other FAQ items if they are open
+                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                        if (otherAnswer !== answer && !otherAnswer.classList.contains('hidden')) {
+                            otherAnswer.classList.add('hidden');
+                            otherAnswer.closest('.faq-item').querySelector('i[data-lucide="chevron-down"]').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isOpen) {
+                        answer.classList.add('hidden');
+                        chevron.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.classList.remove('hidden');
+                        chevron.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll progress indicator
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(135deg, #E91E63, #FF6B9D);
+                z-index: 9999;
+                transition: width 0.25s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+
+            // Enhanced floating CTA behavior
+            const floatingCTA = document.querySelector('.floating-cta');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down - hide CTA
+                    floatingCTA.style.transform = 'translateY(100px)';
+                    floatingCTA.style.opacity = '0';
+                } else {
+                    // Scrolling up - show CTA
+                    floatingCTA.style.transform = 'translateY(0)';
+                    floatingCTA.style.opacity = '1';
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html>
